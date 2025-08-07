@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>nothing !</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 3rem;
+      user-select: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  nothing !
+
+  <audio id="jet2Audio" src="Nothing Beats A Jet2 Holiday.m4a"></audio>
+
+  <script>
+    const audio = document.getElementById('jet2Audio');
+    let isPlaying = false;
+
+    document.body.addEventListener('click', () => {
+      if (!isPlaying) {
+        audio.play();
+        isPlaying = true;
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlaying = false;
+      }
+    });
+  </script>
+</body>
+</html>
